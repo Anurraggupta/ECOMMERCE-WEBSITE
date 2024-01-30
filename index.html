@@ -1,0 +1,88 @@
+<!--DOCTYPE declaration and basic HTML structure-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for character set and viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>Product Page</title>
+    <!-- External CSS and Font Awesome library links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/ECOMMERCE WEBSITE/style.css">
+</head>
+<body>
+    <!-- Container for the entire content -->
+    <div class="container">
+        <!-- Wrapper to contain product box and text content -->
+        <div class="wrapper">
+            <!-- Product box containing images -->
+            <div class="product-box">
+                <!-- Container for all images -->
+                <div class="all-images">
+                    <!-- Small images for selection -->
+                    <div class="small-images">
+                        <img src="/ECOMMERCE WEBSITE/IMAGES/a1.jpg" onclick="clickimg(this)">
+                        <img src="/ECOMMERCE WEBSITE/IMAGES/A2.jpg" onclick="clickimg(this)">
+                        <img src="/ECOMMERCE WEBSITE/IMAGES/A3.jpg" onclick="clickimg(this)">
+                        <img src="/ECOMMERCE WEBSITE/IMAGES/A4.jpg.jpeg" onclick="clickimg(this)">
+                        <img src="/ECOMMERCE WEBSITE/IMAGES/A5.jpeg" onclick="clickimg(this)">
+                    </div>
+                    <!-- Main image display area -->
+                    <div class="main-images">
+                        <img src="/ECOMMERCE WEBSITE/IMAGES/a1.jpg" id="imagebox">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Text content section -->
+            <div class="text">
+                <!-- Content wrapper -->
+                <div class="content">
+                    <!-- Product details -->
+                    <p class="brand">Brand : Apple</p>
+                    <h2>APPLE iphone 12 (white, 64 GB)</h2>
+                    <!-- Review section -->
+                    <div class="review">
+                        <span>(4.6)</span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <!-- Price details -->
+                    <div class="price-box">
+                        <p class="Price">&#8377; 77,900</p>
+                        <strike>&#8377; 89,900</strike>
+                    </div>
+                    <!-- Size selection dropdown -->
+                    <p>Size : <select name="size" >
+                        <option value="select colour">select color</option>
+                        <option value="black">black</option>
+                        <option value="blue">blue</option>
+                        <option value="green">green</option>
+                        <option value="purple">purple</option>
+                    </select></p>
+                    <!-- Quantity input -->
+                    <p>Quantity <input type="text" value="1"></p>
+                    <!-- Add to Cart and Buy Now buttons -->
+                    <button>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+                    <button class="but">
+                        <span class="fa fa-shopping-cart"></span>
+                        Buy now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript section for image click functionality -->
+    <script>
+        function clickimg(smallimg){
+            var fullimg = document.getElementById("imagebox")
+            fullimg.src = smallimg.src
+        }
+    </script>
+</body>
+</html>
